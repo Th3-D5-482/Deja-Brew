@@ -9,10 +9,4 @@ export const styles = StyleSheet.create({
         paddingRight: 16,
         paddingTop: 32,
     },
-    text: {
-        color: "#fff",
-        fontSize: 32,
-        fontWeight: "bold",
-        maxWidth: 80,
-    }
 });
