@@ -1,74 +1,69 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { View, Text, StatusBar, TextInput, Image, ScrollView, TouchableOpacity } from 'react-native'
+import React, { useState } from 'react';
+import { Colors } from '@/components/colors'
+import { Tabs } from 'expo-router';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-
-export default function HomeScreen() {
+export default function index() {
+  const [cappuccino,setCappuccino] = useState(1);
+  const [latte,setLatte] = useState(0);
+  const [americano,setAmericano] = useState(0);
+  const [espresso,setEspresso] = useState(0);
+  function funCappuccino() {
+    setCappuccino(1);
+    setLatte(0);
+    setAmericano(0);
+    setEspresso(0);
+  }
+  function funLatte() {
+    setCappuccino(0);
+    setLatte(1);
+    setAmericano(0);
+    setEspresso(0);
+  }
+  function funAmericano() {
+    setCappuccino(0);
+    setLatte(0);
+    setAmericano(1);
+    setEspresso(0);
+  }
+  function funEspresso() {
+    setCappuccino(0);
+    setLatte(0);
+    setAmericano(0);
+    setEspresso(1);
+  }
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
-  );
-}
+    <View className="flex-1 px-16 pt-32" style ={{backgroundColor: Colors.primary}}>
+      <ScrollView>
+        <StatusBar backgroundColor={Colors.primary}/>
+        <View className='flex flex-row gap-10 justify-center mb-24'>
+          <Text className='text-[#877b74] text-[32px]'>déjà</Text>
+          <Text className='text-white text-[32px]'>Brew</Text>
+        </View>
+        <View className='border border-white rounded-xl bg-[#171017] h-50 text-[18px] text-white flex-row px-15 mb-24'>
+          <Image source={require('@/assets/images/search.png')} className='top-15'/>
+        <TextInput placeholder='Browse your favorite coffee ...' placeholderTextColor={"#877b74"} className='ml-15 text-[18px] text-white'/>
+        </View>
+        <View className='h-640'>
+          <View className='h-50 rounded-xl pt-10 px-10 flex flex-row justify-between'>
+            <TouchableOpacity onPress={funCappuccino}>
+              <Text style ={[{fontSize: 16},{color: cappuccino == 1 ? "#EFE3C8" : "#7d6b65"}]}>Cappuccino</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={funLatte}>
+              <Text style ={[{fontSize: 16},{color: latte == 1 ? "#EFE3C8" : "#7d6b65"}]}>Latte</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress ={funAmericano}>
+              <Text style ={[{fontSize: 16},{color: americano == 1 ? "#EFE3C8" : "#7d6b65"}]}>Americano</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={funEspresso}>
+              <Text style ={[{fontSize: 16},{color: espresso == 1 ? "#EFE3C8" : "#7d6b65"}]}>Espresso</Text>
+            </TouchableOpacity>
+          </View>
+          <View>
 
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
+          </View>
+        </View>
+        </ScrollView>
+    </View> 
+  )
+}  
