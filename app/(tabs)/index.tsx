@@ -33,7 +33,7 @@ export default function index() {
     setEspresso(1);
   }
   return (
-    <View className="flex-1 px-8 pt-16" style ={{backgroundColor: Colors.primary}}>
+    <View className="flex-1 px-8 pt-5" style ={{backgroundColor: Colors.primary}}>
       <ScrollView>
         <StatusBar backgroundColor={Colors.primary}/>
         <View className='flex flex-row justify-center mb-12 gap-2'>
@@ -59,8 +59,25 @@ export default function index() {
               <Text style ={[{fontSize: 16},{color: espresso == 1 ? "#EFE3C8" : "#7d6b65"}]}>Espresso</Text>
             </TouchableOpacity>
           </View>
-          <View>
-
+          <View className='grid grid-cols-2 mt-8 h-[520px]'>
+            <View className='w-full h-[300px] flex flex-row'>
+              <View className='w-1/2 border border-green h-[300px] bg-[#362c36] px-5 rounded-xl py-5'>
+                <Image source={require('@/assets/images/coffee.png')} style ={{width: 120, height: 150}}/>
+                <Text className='mt-2 text-white text-xl'>Cinnamon & Cocoa</Text>
+                <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
+                  <Text className='px-8 py-1 text-white text-2xl font-bold'>$100</Text>
+                  <TouchableOpacity className='w-10 h-10 border bg-[#efe3c8] rounded-xl'><Text className='text-5xl px-1'>+</Text></TouchableOpacity>
+                </View>
+              </View>
+              <View className='w-1/2 border border-green h-[300px] bg-[#362c36] px-5 rounded-xl py-5'>
+                <Image source={require('@/assets/images/coffee.png')} style ={{width: 120, height: 150}}/>
+                <Text className='mt-2 text-white text-xl'>Cinnamon & Cocoa</Text>
+                <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
+                  <Text className='px-8 py-1 text-white text-2xl font-bold'>$100</Text>
+                  <TouchableOpacity className='w-10 h-10 border bg-[#efe3c8] rounded-xl'><Text className='text-5xl px-1'>+</Text></TouchableOpacity>
+                </View>
+              </View>
+            </View>
           </View>
         </View>
         </ScrollView>
