@@ -33,19 +33,19 @@ export default function index() {
     setEspresso(1);
   }
   return (
-    <View className="flex-1 px-16 pt-32" style ={{backgroundColor: Colors.primary}}>
+    <View className="flex-1 px-8 pt-16" style ={{backgroundColor: Colors.primary}}>
       <ScrollView>
         <StatusBar backgroundColor={Colors.primary}/>
-        <View className='flex flex-row gap-10 justify-center mb-24'>
+        <View className='flex flex-row justify-center mb-12 gap-2'>
           <Text className='text-[#877b74] text-[32px]'>déjà</Text>
           <Text className='text-white text-[32px]'>Brew</Text>
         </View>
-        <View className='border border-white rounded-xl bg-[#171017] h-50 text-[18px] text-white flex-row px-15 mb-24'>
-          <Image source={require('@/assets/images/search.png')} className='top-15'/>
-        <TextInput placeholder='Browse your favorite coffee ...' placeholderTextColor={"#877b74"} className='ml-15 text-[18px] text-white'/>
+        <View className='rounded-xl bg-[#171017] h-50 text-[18px] text-white flex-row px-[15px] mb-12 gap-5'>
+          <Image source={require('@/assets/images/search.png')} className='top-[15px]'/>
+          <TextInput placeholder='Browse your favorite coffee ...' placeholderTextColor={"#877b74"} className='ml-15 text-[18px] text-white'/>
         </View>
-        <View className='h-640'>
-          <View className='h-50 rounded-xl pt-10 px-10 flex flex-row justify-between'>
+        <View className='h-[580px]'>
+          <View className='h-50 rounded-xl py-2 px-2 flex flex-row justify-between'>
             <TouchableOpacity onPress={funCappuccino}>
               <Text style ={[{fontSize: 16},{color: cappuccino == 1 ? "#EFE3C8" : "#7d6b65"}]}>Cappuccino</Text>
             </TouchableOpacity>
