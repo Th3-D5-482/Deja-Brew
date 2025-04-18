@@ -2,7 +2,7 @@ import { View, Text, StatusBar, TextInput, Image, ScrollView, TouchableOpacity }
 import React, { useState } from 'react';
 import { Colors } from '@/components/colors'
 import { Tabs } from 'expo-router';
-import { cappuccinos } from '@/database';
+import { drink1 } from '@/database';
 
 export default function index() {
   const [cappuccino,setCappuccino] = useState(1);
@@ -62,7 +62,7 @@ export default function index() {
           </View>
           <View className='flex-row flex-wrap justify-between'>
             { cappuccino == 1 && 
-                cappuccinos.slice(0,6).map((item,index) => {
+                drink1.slice(0,6).map((item,index) => {
                   return (
                       <View className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-10' key ={index}>
                         <Image source={require('@/assets/images/coffee.png')} style={{ width: 120, height: 150 }} />
@@ -76,6 +76,30 @@ export default function index() {
                       </View>
                   );
                 })
+            }
+            {
+              latte == 1 && 
+              <View>
+                <Image source={require('@/assets/images/cofee_cup.png')} style = {{width: 300, height: 300}} className='relative mb-16 mt-24'/>
+                <Text className='text-white text-[24px] text-center font-bold underline mb-5'>Work In Progress</Text>  
+                <Text className='text-[20px] text-center text-white'>By: Th3_D5_482</Text>
+              </View>
+            }
+            {
+              americano == 1 && 
+              <View>
+                <Image source={require('@/assets/images/cofee_cup.png')} style = {{width: 300, height: 300}} className='relative mb-16 mt-24'/>
+                <Text className='text-white text-[24px] text-center font-bold underline mb-5'>Work In Progress</Text>  
+                <Text className='text-[20px] text-center text-white'>By: Th3_D5_482</Text>
+              </View>
+            }
+            {
+              espresso == 1 && 
+              <View>
+                <Image source={require('@/assets/images/cofee_cup.png')} style = {{width: 300, height: 300}} className='relative mb-16 mt-24'/>
+                <Text className='text-white text-[24px] text-center font-bold underline mb-5'>Work In Progress</Text>  
+                <Text className='text-[20px] text-center text-white'>By: Th3_D5_482</Text>
+              </View>
             }
           </View>
         </View>
