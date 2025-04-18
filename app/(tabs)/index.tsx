@@ -2,7 +2,7 @@ import { View, Text, StatusBar, TextInput, Image, ScrollView, TouchableOpacity }
 import React, { useState } from 'react';
 import { Colors } from '@/components/colors'
 import { Tabs } from 'expo-router';
-import { drinks } from '@/database';
+import { cappuccinos } from '@/database';
 
 export default function index() {
   const [cappuccino,setCappuccino] = useState(1);
@@ -60,15 +60,15 @@ export default function index() {
               <Text style ={[{fontSize: 16},{color: espresso == 1 ? "#EFE3C8" : "#7d6b65"}]}>Espresso</Text>
             </TouchableOpacity>
           </View>
-          <View className='grid grid-cols-2 grid-rows-3 mt-8 h-50 gap-5'>
+          <View className='flex-row flex-wrap justify-between'>
             { cappuccino == 1 && 
-                drinks.map((drink,index) => {
+                cappuccinos.slice(0,6).map((item,index) => {
                   return (
-                      <View className='h-[300px] bg-[#362c36] px-5 rounded-xl py-5' key ={index}>
+                      <View className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-10' key ={index}>
                         <Image source={require('@/assets/images/coffee.png')} style={{ width: 120, height: 150 }} />
-                        <Text className='mt-2 text-white text-xl'>{drink.name}</Text>
+                        <Text className='mt-2 text-white text-xl'>{item.name}</Text>
                         <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
-                          <Text className='px-8 py-1 text-white text-2xl font-bold'>${drink.price}</Text>
+                          <Text className='px-8 py-1 text-white text-2xl font-bold'>${item.price}</Text>
                           <TouchableOpacity className='w-10 h-10 border bg-[#efe3c8] rounded-xl'>
                             <Text className='text-5xl px-1'>+</Text>
                           </TouchableOpacity>
