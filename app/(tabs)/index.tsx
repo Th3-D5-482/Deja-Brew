@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Colors } from '@/components/colors'
 import { Tabs } from 'expo-router';
 import { drink1 } from '@/database';
+import { drink2 } from '@/database';
 
 export default function index() {
   const [cappuccino,setCappuccino] = useState(1);
@@ -65,7 +66,7 @@ export default function index() {
                 drink1.slice(0,6).map((item,index) => {
                   return (
                     <View className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-10' key={index}>
-                      <Image source={require("@/database/drink1.imagePath")} style={{ width: 120, height: 150 }} />
+                      <Image source={item.image} style={{ width: 120, height: 150 }} />
                       <Text className='mt-2 text-white text-xl'>{item.name}</Text>
                       <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
                         <Text className='px-8 py-1 text-white text-2xl font-bold'>${item.price}</Text>
@@ -79,11 +80,20 @@ export default function index() {
             }
             {
               latte == 1 && 
-              <View>
-                <Image source={require('@/assets/images/cofee_cup.png')} style = {{width: 300, height: 300}} className='relative mb-16 mt-24'/>
-                <Text className='text-white text-[24px] text-center font-bold underline mb-5'>Work In Progress</Text>  
-                <Text className='text-[20px] text-center text-white'>By: Th3_D5_482</Text>
-              </View>
+              drink2.slice(0,6).map((item,index) => {
+                return (
+                  <View className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-10' key={index}>
+                    <Image source={require("@/assets/images/coffee.png")} style={{ width: 120, height: 150 }} />
+                    <Text className='mt-2 text-white text-xl'>{item.name}</Text>
+                    <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
+                      <Text className='px-8 py-1 text-white text-2xl font-bold'>${item.price}</Text>
+                      <TouchableOpacity className='w-10 h-10 border bg-[#efe3c8] rounded-xl'>
+                        <Text className='text-5xl px-1'>+</Text>
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                );
+              })
             }
             {
               americano == 1 && 
