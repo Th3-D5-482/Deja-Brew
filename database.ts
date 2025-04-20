@@ -33,7 +33,7 @@ export const drink1 = [
         id: 5,
         name: "Chocolate Cappuccino",
         price: "4.75",
-        image: require("@/assets/images/classic-cappuccino.png"),
+        image: require("@/assets/images/chocolate-cappuccino.png"),
     }
 ];
 export const drink2 = [
@@ -57,20 +57,20 @@ export const drink2 = [
     },
     {
         id: 3,
-        name: "Pumkin Spice Latte",
+        name: "Pumpkin Spice Latte",
         price: "5.45",
-        image: require("@/assets/images/classic-cappuccino.png"),
+        image: require("@/assets/images/pumpkin-spice-latte.png"),
     },
     {
         id: 4,
         name: "Iced Lavender Oatmilk Latte",
         price: "5.75",
-        image: require("@/assets/images/classic-cappuccino.png"),
+        image: require("@/assets/images/iced-lanvender-oatmilk-latte.png"),
     },
     {
         id: 5,
         name: "Peppermint Mocha Latte",
         price: "5.50",
-        image: require("@/assets/images/classic-cappuccino.png"),
+        image: require("@/assets/images/peppermint-mocha-latte.png"),
     }
 ]
