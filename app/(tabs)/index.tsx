@@ -66,10 +66,10 @@ export default function index() {
                 drink1.slice(0,6).map((item,index) => {
                   return (
                     <View className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-5' key={index}>
-                      <Image source={item.image} style={{ width: 120, height: 150 }} />
-                      <Text className='mt-2 text-white text-xl'>{item.name}</Text>
+                      <Image source={item.image} style={{ width: 120, height: 150, objectFit: "cover"}} className='mx-auto'/>
+                      <Text className='mt-2 text-white text-xl md:mx-auto'>{item.name}</Text>
                       <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
-                        <Text className='px-8 py-1 text-white text-2xl font-bold'>${item.price}</Text>
+                        <Text className='px-8 py-1 text-white text-2xl font-bold md:mx-auto'>${item.price}</Text>
                         <TouchableOpacity className='w-10 h-10 border bg-[#efe3c8] rounded-xl'>
                           <Text className='text-5xl px-1'>+</Text>
                         </TouchableOpacity>
@@ -83,7 +83,7 @@ export default function index() {
               drink2.slice(0,6).map((item,index) => {
                 return (
                   <View className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-5' key={index}>
-                    <Image source={item.image} style={{ width: 120, height: 150 }} />
+                    <Image source={item.image} style={{ width: 120, height: 150, objectFit: "cover"}} />
                     <Text className='mt-2 text-white text-xl'>{item.name}</Text>
                     <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
                       <Text className='px-8 py-1 text-white text-2xl font-bold'>${item.price}</Text>
@@ -97,7 +97,7 @@ export default function index() {
             }
             {
               americano == 1 && 
-              <View>
+              <View className='mx-auto'>
                 <Image source={require('@/assets/images/cofee_cup.png')} style = {{width: 300, height: 300}} className='relative mb-16 mt-24'/>
                 <Text className='text-white text-[24px] text-center font-bold underline mb-5'>Work In Progress</Text>  
                 <Text className='text-[20px] text-center text-white'>By: Th3_D5_482</Text>
@@ -105,7 +105,7 @@ export default function index() {
             }
             {
               espresso == 1 && 
-              <View>
+              <View className='mx-auto'>
                 <Image source={require('@/assets/images/cofee_cup.png')} style = {{width: 300, height: 300}} className='relative mb-16 mt-24'/>
                 <Text className='text-white text-[24px] text-center font-bold underline mb-5'>Work In Progress</Text>  
                 <Text className='text-[20px] text-center text-white'>By: Th3_D5_482</Text>
