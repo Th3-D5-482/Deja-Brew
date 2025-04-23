@@ -73,4 +73,42 @@ export const drink2 = [
         price: "5.50",
         image: require("@/assets/images/peppermint-mocha-latte.png"),
     }
+];
+export const drink3 = [
+    {
+        id: 0,
+        name: "Caffè Americano",
+        price: "3.45",
+        image: require("@/assets/images/cafe-latte.png"),
+    },
+    {
+        id: 1,
+        name: "Iced Caffè Americanos",
+        price: "3.65",
+        image: require("@/assets/images/vanilla-latte.png"),
+    },
+    {
+        id: 2,
+        name: "Blonde Roast Americano",
+        price: "3.75",
+        image: require("@/assets/images/caramel-bruless-latte.png"),
+    },
+    {
+        id: 3,
+        name: "Decaf Americano",
+        price: "3.45",
+        image: require("@/assets/images/pumpkin-spice-latte.png"),
+    },
+    {
+        id: 4,
+        name: "Americano Misto",
+        price: "4.25",
+        image: require("@/assets/images/iced-lanvender-oatmilk-latte.png"),
+    },
+    {
+        id: 5,
+        name: "Almondmilk Americano",
+        price: "4.95",
+        image: require("@/assets/images/peppermint-mocha-latte.png"),
+    }
 ]
