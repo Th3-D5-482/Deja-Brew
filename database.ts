@@ -135,18 +135,18 @@ export const drink4 = [
         id: 3,
         name: "Caramel Macchiato",
         price: "4.45",
-        image: require("@/assets/images/.png"),
+        image: require("@/assets/images/caramel-macchiato.png"),
     },
     {
         id: 4,
         name: "Caffè Mocha",
         price: "4.15",
-        image: require("@/assets/images/americano-misto.png"),
+        image: require("@/assets/images/caffe-mocha.png"),
     },
     {
         id: 5,
         name: "Iced Shaken Espresso",
         price: "3.95",
-        image: require("@/assets/images/almondmilk-americano.png"),
+        image: require("@/assets/images/ice-shaken-espresso.png"),
     }
 ]
