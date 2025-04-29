@@ -129,13 +129,13 @@ export const drink4 = [
         id: 2,
         name: "Flat White",
         price: "4.25",
-        image: require("@/assets/images/viennese-americano.png"),
+        image: require("@/assets/images/flat-white.png"),
     },
     {
         id: 3,
         name: "Caramel Macchiato",
         price: "4.45",
-        image: require("@/assets/images/decaf-americano.png"),
+        image: require("@/assets/images/.png"),
     },
     {
         id: 4,
