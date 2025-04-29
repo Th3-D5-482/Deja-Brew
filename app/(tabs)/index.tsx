@@ -43,7 +43,7 @@ export default function index() {
         </View>
         <View className='rounded-xl bg-[#171017] h-50 text-[18px] text-white flex-row px-[15px] mb-12 gap-5'>
           <Image source={require('@/assets/images/search.png')} className='top-[15px]'/>
-          <TextInput placeholder='Browse your favorite coffee ...' placeholderTextColor={"#877b74"} className='ml-15 text-[18px] text-white'/>
+          <TextInput placeholder='Browse your favorite coffee ...' placeholderTextColor={"#877b74"} className='ml-15 text-[18px] text-white w-[80%]'/>
         </View>
         <View className='h-50'>
           <View className='h-50 rounded-xl py-2 px-2 flex flex-row justify-between'>
