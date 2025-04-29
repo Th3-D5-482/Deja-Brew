@@ -111,4 +111,42 @@ export const drink3 = [
         price: "4.95",
         image: require("@/assets/images/almondmilk-americano.png"),
     }
+];
+export const drink4 = [
+    {
+        id: 0,
+        name: "Espresso Macchiato",
+        price: "2.55",
+        image: require("@/assets/images/espresso-macchiato.png"),
+    },
+    {
+        id: 1,
+        name: "Cortado",
+        price: "2.95",
+        image: require("@/assets/images/cortado.png"),
+    },
+    {
+        id: 2,
+        name: "Flat White",
+        price: "4.25",
+        image: require("@/assets/images/viennese-americano.png"),
+    },
+    {
+        id: 3,
+        name: "Caramel Macchiato",
+        price: "4.45",
+        image: require("@/assets/images/decaf-americano.png"),
+    },
+    {
+        id: 4,
+        name: "Caffè Mocha",
+        price: "4.15",
+        image: require("@/assets/images/americano-misto.png"),
+    },
+    {
+        id: 5,
+        name: "Iced Shaken Espresso",
+        price: "3.95",
+        image: require("@/assets/images/almondmilk-americano.png"),
+    }
 ]
