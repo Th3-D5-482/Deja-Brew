@@ -41,8 +41,8 @@ export default function index() {
           <Text className='text-[#877b74] text-[32px]'>déjà</Text>
           <Text className='text-white text-[32px]'>Brew</Text>
         </View>
-        <View className='rounded-xl bg-[#171017] h-50 text-[18px] text-white flex-row px-[15px] mb-12 gap-5'>
-          <Image source={require('@/assets/images/search.png')} className='top-[15px]'/>
+        <View className='rounded-xl bg-[#171017] h-50 text-[18px] text-white flex-row px-[15px] mb-12 gap-5 md:h-[40px]'>
+          <Image source={require('@/assets/images/search.png')} className='top-[15px] md:top-[10px]'/>
           <TextInput placeholder='Browse your favorite coffee ...' placeholderTextColor={"#877b74"} className='ml-15 text-[18px] text-white w-[80%]'/>
         </View>
         <View className='h-50'>
