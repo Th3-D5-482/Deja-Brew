@@ -33,6 +33,9 @@ export default function index() {
     setAmericano(0);
     setEspresso(1);
   }
+  function printText() {
+    console.log("Hello World");
+  }
   return (
     <View className="flex-1 px-8 pt-5" style ={{backgroundColor: Colors.primary}}>
       <ScrollView contentContainerStyle ={{paddingBottom: 20}} showsVerticalScrollIndicator = {false}>
@@ -64,7 +67,7 @@ export default function index() {
             { cappuccino == 1 && 
                 drink1.slice(0,6).map((item,index) => {
                   return (
-                    <View className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-5' key={index}>
+                    <TouchableOpacity onPress={printText} key ={index} className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-5'>
                       <Image source={item.image} style={{ width: 120, height: 150, objectFit: "cover"}} className='mx-auto'/>
                       <Text className='mt-3 text-white text-xl md:mx-auto h-[50px]'>{item.name}</Text>
                       <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
@@ -73,7 +76,7 @@ export default function index() {
                           <Text className='text-5xl text-center md:top-[-10px]'>+</Text>
                         </TouchableOpacity>
                       </View>
-                    </View>
+                    </TouchableOpacity>
                   );
                 })
             }
@@ -81,7 +84,7 @@ export default function index() {
               latte == 1 && 
               drink2.slice(0,6).map((item,index) => {
                 return (
-                  <View className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-5' key={index}>
+                  <TouchableOpacity className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-5' key={index} onPress={printText}>
                     <Image source={item.image} style={{ width: 120, height: 150, objectFit: "cover"}} className='mx-auto'/>
                     <Text className='mt-3 text-white text-xl md:mx-auto h-[50px]'>{item.name}</Text>
                     <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
@@ -90,7 +93,7 @@ export default function index() {
                         <Text className='text-5xl text-center md:top-[-10px]'>+</Text>
                       </TouchableOpacity>
                     </View>
-                  </View>
+                  </TouchableOpacity>
                 );
               })
             }
@@ -98,7 +101,7 @@ export default function index() {
               americano == 1 && 
               drink3.slice(0,6).map((item,index) => {
                 return (
-                  <View className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-5' key={index}>
+                  <TouchableOpacity className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-5' key={index} onPress={printText}>
                     <Image source={item.image} style={{ width: 120, height: 150, objectFit: "cover"}} className='mx-auto'/>
                     <Text className='mt-3 text-white text-xl md:mx-auto h-[50px]'>{item.name}</Text>
                     <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
@@ -107,7 +110,7 @@ export default function index() {
                         <Text className='text-5xl text-center md:top-[-10px]'>+</Text>
                       </TouchableOpacity>
                     </View>
-                  </View>
+                  </TouchableOpacity>
                 );
               })
             }
@@ -115,7 +118,7 @@ export default function index() {
               espresso == 1 && 
               drink4.slice(0,6).map((item,index) => {
                 return (
-                  <View className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-5' key={index}>
+                  <TouchableOpacity className='w-[48%] h-[300px] bg-[#362c36] px-5 rounded-xl py-5 mt-5' key={index} onPress={printText}>
                     <Image source={item.image} style={{ width: 120, height: 150, objectFit: "cover"}} className='mx-auto'/>
                     <Text className='mt-3 text-white text-xl md:mx-auto h-[50px]'>{item.name}</Text>
                     <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
@@ -124,7 +127,7 @@ export default function index() {
                         <Text className='text-5xl text-center md:top-[-10px]'>+</Text>
                       </TouchableOpacity>
                     </View>
-                  </View>
+                  </TouchableOpacity>
                 );
               })
             }
