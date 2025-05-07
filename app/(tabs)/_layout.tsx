@@ -41,6 +41,7 @@ export default function _layout() {
                 <Ionicons name ="person" size={size} color={color} />
             ),
             }} />
+            
     </Tabs>
   )
 }
