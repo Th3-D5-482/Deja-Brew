@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Colors } from '@/components/colors'
 import { router, Stack, Tabs } from 'expo-router';
 import { drink1, drink2, drink3,drink4 } from '@/database';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function index() {
   const [cappuccino,setCappuccino] = useState(1);
@@ -73,7 +74,7 @@ export default function index() {
                       <View className='w-full mt-3 h-10 bg-[#463d46] rounded-xl flex flex-row justify-between'>
                         <Text className='py-1 text-white text-2xl font-bold mx-auto'>${item.price}</Text>
                         <TouchableOpacity className='w-10 h-10 border bg-[#efe3c8] rounded-xl'>
-                          <Text className='text-5xl text-center md:top-[-10px]'>+</Text>
+                          <Ionicons name ="add" size ={32} color ={Colors.secondary}/>
                         </TouchableOpacity>
                       </View>
                     </TouchableOpacity>
