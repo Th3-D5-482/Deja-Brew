@@ -5,11 +5,11 @@ import { router, useLocalSearchParams } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
 
 export default function description() {
-  const {image,name,price} = useLocalSearchParams();
+  const {image,name,price,ratings} = useLocalSearchParams();
   return (
     <View className ='flex-1 px-8 pt-5' style = {{backgroundColor: Colors.primary}}>
         <ScrollView showsVerticalScrollIndicator = {false}>
-            <View className='border border-green-900 h-[450px] rounded-xl'>
+            <View className='h-[450px] rounded-xl'>
               <Image source={require("@/assets/images/classic-cappuccino.png")} style={{ width: 400, height: 480, objectFit: 'contain' }} className='mx-auto' />
                 <View className='rounded-full h-12 w-12 top-[-460px] left-5 p-1'>
                   <TouchableOpacity onPress={() => router.back()}>
@@ -25,14 +25,17 @@ export default function description() {
                     <Text className='text-white text-xl'>Drillzed with Caramel</Text>
                   </View>
                   <View className='w-[30%] p-2 flex flex-row'>
-                    <Ionicons name ="star" size ={24} color ={Colors.inactiveTab}/>
-                    <Text className='text-white text-xl ml-2'>3.5</Text>
+                    <Ionicons name ="star" size ={24} color ={Colors.star}/>
+                    <Text className='text-white text-xl ml-2'>{ratings}</Text>
                   </View>
                 </View>
               </View>
               <View className='w-[20%] h-[80px] p-4'>
-                <Ionicons name='heart' size={42} color ={Colors.inactiveTab}/>
+                <Ionicons name='heart' size={42} color ={Colors.tertiary}/>
               </View>
+            </View>
+            <View>
+              <Text>The timeless harmony of espresso, steamed milk, and a thick layer of frothy foam. Rich, bold, and velvety, it delivers that perfect balance of robustness and creaminess.</Text>
             </View>
       </ScrollView>
     </View>

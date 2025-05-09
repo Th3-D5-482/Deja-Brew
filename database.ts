@@ -4,36 +4,42 @@ export const drink1 = [
         name: "Classic Cappuccino",
         price: "4.30",
         image: require("@/assets/images/classic-cappuccino.png"),
+        ratings: "4.8",    
     },
     {
         id: 1,
         name: "Caramel Cappuccino",
         price: "4.50",
         image: require("@/assets/images/caramel-cappuccino.png"),
+        ratings: "4.6",
     },
     {
         id: 2,
         name: "Vanilla Cappuccino",
         price: "4.50",
         image: require("@/assets/images/vanilla-cappuccino.png"),
+        ratings: "4.5",
     },
     {
         id: 3,
         name: "HazeInut Cappuccino",
         price: "4.50",
         image: require("@/assets/images/hazeinut-cappuccino.png"),
+        ratings: "4.7",
     },
     {
         id: 4,
         name: "Mocha Cappuccino",
         price: "4.75",
         image: require("@/assets/images/mocha-cappuccino.png"),
+        ratings: "4.9",
     },
     {
         id: 5,
         name: "Chocolate Cappuccino",
         price: "4.75",
         image: require("@/assets/images/chocolate-cappuccino.png"),
+        ratings: "4.8",
     }
 ];
 export const drink2 = [
