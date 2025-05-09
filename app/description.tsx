@@ -5,7 +5,7 @@ import { router, useLocalSearchParams } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
 
 export default function description() {
-  const {image,name,price,ratings} = useLocalSearchParams();
+  const {image,name,price,ratings,description} = useLocalSearchParams();
   return (
     <View className ='flex-1 px-8 pt-5' style = {{backgroundColor: Colors.primary}}>
         <ScrollView showsVerticalScrollIndicator = {false}>
@@ -35,9 +35,15 @@ export default function description() {
               </View>
             </View>
             <View>
-              <Text>The timeless harmony of espresso, steamed milk, and a thick layer of frothy foam. Rich, bold, and velvety, it delivers that perfect balance of robustness and creaminess.</Text>
+              <Text className='text-gray-400 text-xl'>{description}</Text>
             </View>
       </ScrollView>
+      <View className='border border-green-900 h-[65px]'>
+        <View className='flex flex-column'>
+          <Text className='text-white text-2xl'>Price</Text>
+          <Text className='text-white text-3xl mt-2 font-bold'>${price}</Text>
+        </View>
+      </View>
     </View>
   )
 }
