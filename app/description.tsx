@@ -38,7 +38,7 @@ export default function description() {
               <Text className='text-gray-400 text-xl'>{description}</Text>
             </View>
       </ScrollView>
-      <View className='border border-green-900 h-[65px]'>
+      <View className='border border-green-900 h-[65px] mb-3'>
         <View className='flex flex-column'>
           <Text className='text-white text-2xl'>Price</Text>
           <Text className='text-white text-3xl mt-2 font-bold'>${price}</Text>
