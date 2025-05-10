@@ -30,18 +30,23 @@ export default function description() {
                   </View>
                 </View>
               </View>
-              <View className='w-[20%] h-[80px] p-4'>
-                <Ionicons name='heart' size={42} color ={Colors.tertiary}/>
+              <View className='w-[20%] h-[80px] p-5'>
+                <Ionicons name='heart' size={40} color ={Colors.tertiary}/>
               </View>
             </View>
             <View>
               <Text className='text-gray-400 text-xl'>{description}</Text>
             </View>
       </ScrollView>
-      <View className='border border-green-900 h-[65px] mb-3'>
-        <View className='flex flex-column'>
-          <Text className='text-white text-2xl'>Price</Text>
-          <Text className='text-white text-3xl mt-2 font-bold'>${price}</Text>
+      <View className='h-[65px] mb-3 flex flex-row'>
+        <View className='w-[20%] flex flex-column'>
+          <Text className='text-white text-xl'>Price</Text>
+          <Text className='text-white text-2xl mt-2 font-bold'>${price}</Text>
+        </View>
+        <View className='w-[80%] my-auto'>
+          <TouchableOpacity className='bg-[#efe3c8] rounded-xl p-5 w-[80%] ml-[55px]'>
+            <Text className='text-center text-2xl font-bold'>Buy now</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
