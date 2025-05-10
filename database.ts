@@ -8,6 +8,9 @@ export const drink1 = [
         image: require("@/assets/images/classic-cappuccino.png"),
         ratings: "4.8",
         description: "A bold shot of espresso meets perfectly steamed milk, crowned with thick, frothy foam. The result? A velvety, full-bodied experience that balances rich intensity with creamy contrast—both invigorating and indulgent in every sip.",
+        subTitle: "Fortified with Tradition",
+        isFavorite: false,
+        isCart: false,
     },
     {
         id: 1,
@@ -16,6 +19,9 @@ export const drink1 = [
         image: require("@/assets/images/caramel-cappuccino.png"),
         ratings: "4.6",
         description: "Deep espresso entwines with golden caramel, yielding a drink both smooth and sumptuous. The buttery sweetness melds effortlessly with creamy milk, creating an experience that lingers—a delightful contrast of smokiness and warmth.",
+        subTitle: "Drenched in Golden Bliss",
+        isFavorite: false,
+        isCart: false,
     },
     {
         id: 2,
@@ -24,6 +30,9 @@ export const drink1 = [
         image: require("@/assets/images/vanilla-cappuccino.png"),
         ratings: "4.5",
         description: "A comforting infusion of robust espresso and delicate vanilla, where warmth and sweetness intertwine. Its creamy aroma and gentle finish invite one into an elegant moment, simple yet refined.",
+        subTitle: "Enlightened with Velvet",
+        isFavorite: false,
+        isCart: false,
     },
     {
         id: 3,
@@ -32,6 +41,9 @@ export const drink1 = [
         image: require("@/assets/images/hazeinut-cappuccino.png"),
         ratings: "4.7",
         description: "he rich embrace of roasted hazelnut meets the bold presence of espresso, weaving a tapestry of flavor. The nutty depth enhances the coffee’s natural warmth, mingling with smooth milk for an experience both indulgent and satisfying.",
+        subTitle: "Embedded with Roasted Depth",
+        isFavorite: false,
+        isCart: false,
     },
     {
         id: 4,
@@ -40,6 +52,9 @@ export const drink1 = [
         image: require("@/assets/images/mocha-cappuccino.png"),
         ratings: "4.9",
         description: "A rich fusion of espresso and chocolate, where deep coffee notes meld with bittersweet cocoa for an irresistible balance of energy and indulgence. Velvety milk softens the bold flavors, creating a smooth, dessert-like experience that lingers in every sip. A perfect companion for both morning rituals and mid-day escapes.",
+        subTitle: "Fused with Cocoa Boldness",
+        isFavorite: false,
+        isCart: false,
     },
     {
         id: 5,
@@ -48,6 +63,9 @@ export const drink1 = [
         image: require("@/assets/images/chocolate-cappuccino.png"),
         ratings: "4.8",
         description: "A luxurious blend of espresso and velvety chocolate, this cappuccino strikes a perfect balance between bold intensity and soothing sweetness. The rich cocoa deepens the experience, creating a smooth, indulgent cup that feels both comforting and refined. Whether enjoyed as a cozy evening companion or a quiet moment of indulgence, it wraps the senses in warmth and relaxation.",
+        subTitle: "Wrapped in Rich Decadence",
+        isFavorite: false,
+        isCart: false,
     }
 ];
 export const drink2 = [

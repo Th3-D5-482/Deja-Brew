@@ -1,11 +1,12 @@
 import { View, Text, ScrollView,Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { Colors } from '@/components/colors'
 import { router, useLocalSearchParams } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
 
 export default function description() {
-  const {image,name,price,ratings,description} = useLocalSearchParams();
+  const {image,name,price,ratings,description,subTitle,isFavorite} = useLocalSearchParams();
+  const [favorite,setFavorite] = useState(true);
   return (
     <View className ='flex-1 px-8 pt-5' style = {{backgroundColor: Colors.primary}}>
         <ScrollView showsVerticalScrollIndicator = {false}>
@@ -22,7 +23,7 @@ export default function description() {
                 <Text className='text-white text-2xl font-bold'>{name}</Text>
                 <View className='flex flex-row mt-2 '>
                   <View className='w-[70%] pt-2'>
-                    <Text className='text-white text-xl'>Drillzed with Caramel</Text>
+                    <Text className='text-white text-xl'>{subTitle}</Text>
                   </View>
                   <View className='w-[30%] p-2 flex flex-row'>
                     <Ionicons name ="star" size ={24} color ={Colors.star}/>
@@ -31,7 +32,9 @@ export default function description() {
                 </View>
               </View>
               <View className='w-[20%] h-[80px] p-5'>
-                <Ionicons name='heart' size={40} color ={Colors.tertiary}/>
+                <TouchableOpacity onPress={() => setFavorite(!favorite)}>
+                  {favorite ? <Ionicons name='heart' size={40} color ={Colors.tertiary}/>: <Ionicons name='heart' size={40} color ={Colors.inactiveTab}/> }
+                </TouchableOpacity>
               </View>
             </View>
             <View>
@@ -45,7 +48,7 @@ export default function description() {
         </View>
         <View className='w-[80%] my-auto'>
           <TouchableOpacity className='bg-[#efe3c8] rounded-xl p-5 w-[80%] ml-[55px]'>
-            <Text className='text-center text-2xl font-bold'>Buy now</Text>
+            <Text className='text-center text-2xl font-bold'>Buy Now</Text>
           </TouchableOpacity>
         </View>
       </View>
