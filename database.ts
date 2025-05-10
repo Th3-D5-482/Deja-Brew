@@ -9,7 +9,7 @@ export const drink1 = [
         ratings: "4.8",
         description: "A bold shot of espresso meets perfectly steamed milk, crowned with thick, frothy foam. The result? A velvety, full-bodied experience that balances rich intensity with creamy contrast—both invigorating and indulgent in every sip.",
         subTitle: "Fortified with Tradition",
-        isFavorite: false,
+        isFavorite: true,
         isCart: false,
     },
     {

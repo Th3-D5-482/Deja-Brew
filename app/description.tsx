@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons'
 
 export default function description() {
   const {image,name,price,ratings,description,subTitle,isFavorite} = useLocalSearchParams();
-  const [favorite,setFavorite] = useState(true);
+  const [favorite,setFavorite] = useState(isFavorite ==="true");
   return (
     <View className ='flex-1 px-8 pt-5' style = {{backgroundColor: Colors.primary}}>
         <ScrollView showsVerticalScrollIndicator = {false}>
